@@ -4,6 +4,20 @@ public class UsersVO {
 	private int userId;
 	private String password;
 	private String userName;
+	
+	public static UsersVO getFallbackInstance() {
+		return new UsersVO(-1, "降级处理用户名");
+	}
+	
+	public UsersVO() {
+		super();
+	}
+	public UsersVO(int userId, String userName) {
+		super();
+		this.userId = userId;
+		this.password = "123";
+		this.userName = userName;
+	}
 	public int getUserId() {
 		return userId;
 	}
