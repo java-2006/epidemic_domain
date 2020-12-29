@@ -10,13 +10,19 @@ public class DateUtil {
 	/**
 	 * 格式化字符串到日期
 	 */
-	public static Date formatStr2Date(String str) {
+	public static Date parseStr2Date(String str) {
 		try {
 			return sdf1.parse(str);
 		} catch (ParseException e) {
 			e.printStackTrace();
 			return null;
 		}
+	}
+	/**
+	 * 格式化日期到字符串
+	 */
+	public static String formatDate2Str(Date date) {
+		return sdf1.format(date);
 	}
 	/**
 	 * 格式化字符串到时间
